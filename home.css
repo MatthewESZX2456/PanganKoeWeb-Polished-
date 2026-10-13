@@ -17,6 +17,10 @@ body {
   background-image: linear-gradient(to right, rgba(39, 126, 61, 0.933), #72eb7e);
 }
 
+main {
+  flex: 1;
+}
+
 header {
   display: flex;
   padding: 20px;
@@ -147,6 +151,18 @@ header .a1:hover, .a2:hover, .a3:hover {
   color: white;
 }
 
+.card1 {
+  position: absolute;
+  left: 0px;
+  bottom: -100px;
+}
+
+.card2 {
+  position: absolute;
+  left: 350px;
+  bottom: -100px;
+}
+
 .card1:hover {
   transform: translateY(-4px);
 }
@@ -158,11 +174,12 @@ header .a1:hover, .a2:hover, .a3:hover {
 footer {
   padding: 20px;
   background-color: rgb(65, 159, 39);
-  margin-top: 100px;
+  margin-top: 500px;
   box-shadow: 2px 2px 8px;
   display: flex;
   flex-direction: row;
   flex: 1;
+  position: sticky;
 }
 
 footer .text-footer-1 {
