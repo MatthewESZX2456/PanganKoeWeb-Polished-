@@ -3,58 +3,127 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#2a8232">
 
     <title>PanganKoe</title>
 
+    <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="home.css">
-    <link rel="icon" type="image/png/jpg" href="">
+    <link rel="icon" type="image/png" href="Green P Vegetable Bowl Logo.png">
   </head>
 
   <body>
-    <header>
-      <h1 class="title1">Pangan</h1>
-      <h1 class="title2">Koe</h1>
+    <header class="site-header">
+      <div class="header-inner container">
+        <a class="brand" href="home.html" aria-label="PanganKoe, ke beranda">
+          <img class="brand-logo" src="Green P Vegetable Bowl Logo.png" alt="" width="46" height="46">
+          <span class="title1">Pangan</span><span class="title2">Koe</span>
+        </a>
 
-      <nav class="navbar1">
-        <a class="a1" href=""><p>Home</p></a>
-        <a class="a2" href=""><p>Resgistration</p></a>
-        <a class="a3" href=""><p>About Us</p></a>
-      </nav>
+        <nav class="navbar1" aria-label="Menu utama">
+          <a class="a1" href="home.html" aria-current="page">Home</a>
+          <a class="a2" href="register.html">Registration</a>
+          <a class="a3" href="#about">About Us</a>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section class="hero-section-1">
-        <h1 class="header1">Penuhi Kebutuhan Harianmu</h1>
-        <h1 class="header2">Dengan Mudah!</h1>
-        <p class="subheader1">PanganKoe membantu anda untuk menentukan<br>
-        jadwal menu harian, bahkan sampai mingguan sesuai dengan budget<br>
-        yang telah Anda sesuaikan. Juga membantu menyesuaikan kebutuhan<br>
-        makan yang anda butuhkan, sesuai dengan kebutuhan badan Anda. </p>
+      <section class="hero-section-1 container">
+        <div class="hero-copy">
+          <h1 class="hero-title">
+            <span class="header1">Penuhi Kebutuhan Harianmu</span>
+            <span class="header2">Dengan Mudah!</span>
+          </h1>
 
-        <a class="signups" href="register.html">
-          <button class="signup-button">Sign Up</button>
-        </a>
+          <p class="subheader1">
+            PanganKoe membantu anda untuk menentukan jadwal menu harian, bahkan
+            sampai mingguan sesuai dengan budget yang telah Anda sesuaikan. Juga
+            membantu menyesuaikan kebutuhan makan yang anda butuhkan, sesuai
+            dengan kebutuhan badan Anda.
+          </p>
 
-        <img class="hero-image-1"
-         src="PanganKoe Green Mascot Ambassador.png"
-         height="600">
+          <a class="signup-button" href="register.html">Sign Up</a>
+        </div>
+
+        <div class="hero-art mascot-stage">
+          <img class="hero-image-1"
+           src="PanganKoe Green Mascot Ambassador.png"
+           alt="Maskot PanganKoe, anak bertopi daun yang memegang ponsel"
+           width="1254" height="1254">
+        </div>
       </section>
 
-      <section class="card-container-1">
-        <section class="inside-container-1">
-          <div id="card" class="card1">
+      <section class="card-container-1 container">
+        <div class="inside-container-1">
+          <article class="card card1">
+            <span class="card-image" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="34" height="34" fill="none">
+                <circle cx="24" cy="24" r="19" stroke="currentColor" stroke-width="3.5"/>
+                <text x="24" y="29.5" text-anchor="middle" font-family="Poppins, system-ui, sans-serif"
+                  font-size="17" font-weight="700" fill="currentColor">Rp</text>
+              </svg>
+            </span>
             <h2 class="card-text">Makan Sesuai Budget</h2>
-            <div class="card-image"></div>
-          </div>
-          <div id="card" class="card2">
+            <p class="card-desc">Atur menu harian sampai mingguan sesuai anggaran belanjamu.</p>
+          </article>
+
+          <article class="card card2">
+            <span class="card-image" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="34" height="34" fill="none"
+                stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 39C8 19 20 8 40 8C41 28 31 41 9 39Z"/>
+                <path d="M9 39L28 20"/>
+              </svg>
+            </span>
             <h2 class="card-text">Sehat dan Bergizi</h2>
-          </div>
-        </section>
+            <p class="card-desc">Menu disesuaikan dengan kebutuhan makan tubuhmu.</p>
+          </article>
+        </div>
       </section>
 
+      <section class="aboutus-container container" id="about">
+        <div class="aboutus-container-1">
+          <div class="aboutus-description">
+            <h2 class="aboutus-header">About Us</h2>
+
+            <p class="aboutus-desc-1">
+              PanganKoe hadir sebagai solusi digital untuk membantu masyarakat merencanakan
+              makanan yang lebih bergizi, mengelola anggaran belanja dengan lebih bijak, dan
+              menemukan UMKM pangan lokal dengan mudah.
+            </p>
+
+            <p class="aboutus-desc-1">
+              Melalui fitur Smart Meal Planner, Grocery Calculator, dan UMKM Connector, kami
+              mengintegrasikan perencanaan menu, pengelolaan kebutuhan bahan makanan, serta
+              akses ke usaha kuliner lokal dalam satu platform yang praktis dan mudah digunakan.
+            </p>
+
+            <ul class="feature-chips" aria-label="Fitur PanganKoe">
+              <li>Smart Meal Planner</li>
+              <li>Grocery Calculator</li>
+              <li>UMKM Connector</li>
+            </ul>
+
+            <p class="aboutus-desc-1">
+              Kami percaya bahwa makanan bergizi seharusnya dapat diakses oleh semua orang
+              tanpa harus mengorbankan anggaran. Karena itu, PanganKoe berkomitmen untuk
+              mendukung kebiasaan makan yang lebih baik, mengurangi pemborosan makanan, dan
+              membuka peluang bagi UMKM lokal untuk berkembang melalui teknologi digital.
+            </p>
+          </div>
+
+          <figure class="aboutus-img">
+            <img class="aboutus-image"
+             src="Wholesome Family Meal Planning.png"
+             alt="Keluarga tersenyum menikmati makan bersama dengan menu yang sudah direncanakan"
+             width="1536" height="1024" loading="lazy">
+          </figure>
+        </div>
+      </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <p class="text-footer-1">Pangan</p>
       <p class="text-footer-2">Koe</p>
       <p class="text-footer-3">All Rights Reserved</p>

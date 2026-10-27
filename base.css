@@ -1,0 +1,305 @@
+/* ==========================================================
+   PanganKoe — base.css
+   Dipakai bersama oleh home.html dan register.html
+   ========================================================== */
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  /* hijau: warna asli PanganKoe, dibuat sedikit lebih dalam agar teks putih terbaca */
+  --forest: #14502b;
+  --panel: #1d6a35;
+  --leaf: #2a8232;
+
+  /* kuning: aksen khas PanganKoe */
+  --lemon: #f1f168;
+  --lemon-shadow: #b9b23c;
+
+  --mint: #d0ffe8;
+  --cream: #fbf8e8;
+  --ink: #17331f;
+
+  --font: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --shadow-soft: 0 14px 30px rgba(8, 50, 20, 0.22);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  font-family: var(--font);
+  color: #fff;
+  line-height: 1.6;
+  color-scheme: light;
+
+  /* gradien asli (gelap → terang), dibuat lebih dalam di sisi teks */
+  background-color: #1a6636;
+  background-image: linear-gradient(to right, #1a6636 0%, #23823f 55%, #72eb7e 100%);
+}
+
+main {
+  flex: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: min(1180px, 100% - 2.5rem);
+  margin-inline: auto;
+}
+
+:focus-visible {
+  outline: 3px solid var(--lemon);
+  outline-offset: 3px;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--leaf);
+  box-shadow: 0 2px 14px rgba(5, 40, 15, 0.35);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  padding-block: 0.7rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 46px;
+  height: 46px;
+  margin-right: 0.7rem;
+  padding: 4px;
+  border-radius: 50%;
+  background-color: var(--cream);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.18);
+}
+
+.title1,
+.title2 {
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.title1 {
+  color: #fff;
+}
+
+.title2 {
+  color: var(--lemon);
+}
+
+.navbar1 {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.navbar1 a {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar1 a:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-3px);
+}
+
+.navbar1 a[aria-current="page"] {
+  background-color: rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 -3px 0 var(--lemon);
+}
+
+/* ---------- Tombol kuning (Sign Up / Daftar!) ---------- */
+
+.signup-button,
+.submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.85rem 2.4rem;
+  border: none;
+  border-radius: 14px;
+
+  background-color: var(--lemon);
+  color: var(--panel);
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  box-shadow: 0 5px 0 var(--lemon-shadow), 0 14px 22px rgba(8, 50, 20, 0.25);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.signup-button:hover,
+.submit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 0 var(--lemon-shadow), 0 18px 26px rgba(8, 50, 20, 0.28);
+}
+
+.signup-button:active,
+.submit-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--lemon-shadow), 0 4px 8px rgba(8, 50, 20, 0.25);
+}
+
+/* ---------- Piring kuning di belakang maskot ---------- */
+
+.mascot-stage {
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.mascot-stage::before {
+  content: "";
+  position: absolute;
+  inset: 12% 9% 6%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 28%, #fffde6 0%, var(--lemon) 72%);
+  box-shadow: 0 22px 44px rgba(8, 50, 20, 0.28), inset 0 -10px 0 rgba(185, 178, 60, 0.35);
+}
+
+.mascot-stage img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 16px rgba(8, 50, 20, 0.3));
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding: 1.6rem 1.25rem;
+
+  background-color: var(--forest);
+  box-shadow: 0 -2px 14px rgba(5, 40, 15, 0.3);
+}
+
+.text-footer-1,
+.text-footer-2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-footer-1 {
+  color: #fff;
+}
+
+.text-footer-2 {
+  color: var(--lemon);
+}
+
+.text-footer-3 {
+  margin-left: 0.8rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- Responsif ---------- */
+
+@media (max-width: 900px) {
+  /* di layar sempit teks memenuhi lebar, jadi gradien dibuat vertikal agar teks tetap terbaca */
+  body {
+    background-image: linear-gradient(to bottom, #1a6636 0%, #23823f 55%, #4cc060 100%);
+  }
+}
+
+@media (max-width: 560px) {
+  .header-inner {
+    justify-content: center;
+  }
+
+  .navbar1 {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar1 a {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.92rem;
+  }
+
+  .site-footer {
+    flex-wrap: wrap;
+  }
+
+  .text-footer-3 {
+    flex-basis: 100%;
+    margin: 0.3rem 0 0;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

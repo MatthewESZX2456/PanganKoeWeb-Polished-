@@ -3,33 +3,109 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#2a8232">
 
-    <title>PanganKoe</title>
+    <title>Daftar | PanganKoe</title>
 
+    <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="register.css">
-    <link rel="icon" type="image/png/jpg" href="">
+    <link rel="icon" type="image/png" href="Green P Vegetable Bowl Logo.png">
   </head>
 
   <body>
-    <header>
-      <h1 class="title1">Pangan</h1>
-      <h1 class="title2">Koe</h1>
+    <header class="site-header">
+      <div class="header-inner container">
+        <a class="brand" href="home.html" aria-label="PanganKoe, ke beranda">
+          <img class="brand-logo" src="Green P Vegetable Bowl Logo.png" alt="" width="46" height="46">
+          <span class="title1">Pangan</span><span class="title2">Koe</span>
+        </a>
 
-      <nav class="navbar1">
-        <a class="a1" href=""><p>Home</p></a>
-        <a class="a2" href=""><p>Resgistration</p></a>
-        <a class="a3" href=""><p>About Us</p></a>
-      </nav>
+        <nav class="navbar1" aria-label="Menu utama">
+          <a class="a1" href="home.html">Home</a>
+          <a class="a2" href="register.html" aria-current="page">Registration</a>
+          <a class="a3" href="home.html#about">About Us</a>
+        </nav>
+      </div>
     </header>
 
     <main>
+      <div class="register-layout container">
+        <section class="form-container">
+          <form class="pangankoe-form" action="" method="POST" id="form" novalidate>
+            <h1 class="form-title">Buat Akun!</h1>
 
+            <section class="form-content">
+              <div class="field">
+                <label for="name">Nama Lengkap</label>
+                <input class="normal-input" type="text"
+                placeholder="Rusdi Santoso" id="name" name="name" autocomplete="name">
+                <small class="error" id="error-name" role="alert"></small>
+              </div>
+
+              <div class="field">
+                <label for="number">Nomor Telepon</label>
+                <input class="normal-input" type="number"
+                placeholder="08xxxxxxxxxx" id="number" name="number" inputmode="numeric" autocomplete="tel">
+                <small class="error" id="error-number" role="alert"></small>
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input class="normal-input" type="text" id="email" name="email"
+                placeholder="santosorusdi78@gmail.com" inputmode="email" autocomplete="email">
+                <small class="error" id="error-email" role="alert"></small>
+              </div>
+
+              <section class="password-group">
+                <div class="field for-password">
+                  <label for="password">Password</label>
+                  <input class="password-input normal-input" type="password" id="password" name="password" autocomplete="new-password">
+                  <small class="error" id="error-password" role="alert"></small>
+                </div>
+
+                <div class="field for-confirm-password">
+                  <label for="confirm-password">Confirm Password</label>
+                  <input class="password-input normal-input" type="password" id="confirm-password" name="confirm-password" autocomplete="new-password">
+                  <small class="error" id="error-confirm-password" role="alert"></small>
+                </div>
+              </section>
+
+              <div class="field">
+                <label for="birthdate">Tanggal Lahir</label>
+                <input class="normal-input" type="date"
+                id="birthdate" name="birthdate" autocomplete="bday">
+                <small class="error" id="error-birthdate" role="alert"></small>
+              </div>
+
+              <div class="field">
+                <label for="gender-picker">Gender</label>
+                <select class="normal-input" id="gender-picker" name="gender">
+                  <option value="">Pilih</option>
+                  <option value="male">Laki-laki</option>
+                  <option value="female">Perempuan</option>
+                  <option value="non-binary">Tidak ingin memberi tahu</option>
+                </select>
+                <small class="error" id="error-gender" role="alert"></small>
+              </div>
+
+              <button class="submit-button" type="submit">Daftar!</button>
+            </section>
+          </form>
+        </section>
+
+        <section class="for-image-1 mascot-stage">
+          <img class="image-mascot" src="PanganKoe Green Mascot Ambassador.png"
+          alt="Maskot PanganKoe mengajak kamu mendaftar" width="1254" height="1254">
+        </section>
+      </div>
     </main>
 
-    <footer>
-      
+    <footer class="site-footer">
+      <p class="text-footer-1">Pangan</p>
+      <p class="text-footer-2">Koe</p>
+      <p class="text-footer-3">All Rights Reserved</p>
     </footer>
 
+    <script src="register.js"></script>
   </body>
-
-  </html>
+</html>
